@@ -8,7 +8,7 @@ void main()
 	gets(a);
 	//printf("\nEntered string is : %s",a);
 	printf("\nEnter a character to search its occurance:");
-	scanf("%c",ch);
+	scanf("%c",&ch);
 	for(i=0;i<strlen(a);i++)
 	{
 		if(a[i]==ch)

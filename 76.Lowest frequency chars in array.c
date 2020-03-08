@@ -2,13 +2,14 @@
 #include<string.h>
 void main()
 {
-	int i,j,count=0,ind[20],len,max[20],tempm=0,max_index,max_count,mi=0;
+	int i,j,count=0,ind[20],len,max[20],tempm=1,max_index,max_count,mi=0;
 	char str[20];
 	printf("Enter an string: ");
 	gets(str);
 	len=strlen(str);
 	for(i=0;i<len;i++)
 	{
+		count++;
 		for(j=i+1;j<len;j++)
 		{
 			if(str[j]==str[i])
@@ -38,13 +39,14 @@ void main()
 	}*/
 	for(i=0;i<mi;i++)
 	{
-		if(max[i]>tempm)
-		tempm=max[i];	
+		if(tempm>max[i])
+		{
+		tempm=max[i];
+		}
 	}
 
-	if(tempm!=0)
-	{
-	printf("\nMax frequency character in the array is/are\t");
+
+	printf("\nMinimum frequency character in the array is/are:\t");
 		for(i=0;i<mi;i++)
 	{
 		if(tempm==max[i])
@@ -53,8 +55,7 @@ void main()
 		printf("%c ",str[max_index]);
 		}
 	}
-}
-	if(tempm==0)
-	printf("\nAll characters are of equal frequency.");
+
+
 
 }
